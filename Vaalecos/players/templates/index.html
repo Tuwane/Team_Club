@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title> </title>
-</head>
-<body style="background-color:lightgreen">
-	<h1 style="color:blue">Players</h1>
+{% extends "master.html" %}
+{% block title %}
+	Vall Ecoes Football Club -List of all Players
+{% endblock%}
 
-	<p>List of players</p>
-
-
-</body>
-
-</html>
+{% block content %}
+<pp><a href="/">HOME</a></p>
+<h1>Players</h1>
+	<ol>
+		{% for x in myplayers %}
+		<li><a href="details.html/{{ x.di}}">{{ x.firstname }} {{ x.lastname }}</a></li>
+		{% endfor %}
+	</ol>
+{% endblock %}
